@@ -5,7 +5,7 @@ class TicTacToe:
     def __init__(self):
         self.value = None;
         self.position = None;
-        self.arrays = ["["+str(i)+"]" for i in range(0,10)]
+        self.arrays = ["["+str(i)+"]" for i in range(0,9)]
         self.lastval = None
         self.count =0
         
@@ -47,6 +47,11 @@ class TicTacToe:
             print("Please let "+str(val)+" play instead!")
             return False
         
+        if self.position >= len(self.arrays):
+            self.lastval = val
+            print("This position is higher than the actual positions available")
+            return False
+        
         if self.spotavailable():
             pass
         else:
@@ -83,6 +88,7 @@ class TicTacToe:
     
     #check if the spot is taken by another value
     def spotavailable(self):
+        
         if self.arrays[self.position] == "x" or self.arrays[self.position] == "o":
             return False
         return True
@@ -118,20 +124,36 @@ class TicTacToe:
         return True
         
 v = TicTacToe()
-
 count = 9
 def inputs(count):
     if count == 0:
         return "done"
     #get value and position from user
     val,position = input("Enter your value: "), input("Enter your position: ")
-    f = v.place(val,int(position))
+    
+    #make sure only x and o are used as a variable
+    if val !='x' and val != 'o':
+        print("please use 'x' or 'o' as value")
+        inputs(count)
+    
+    #check if position given is an interger
+    
+    try:
+        actposition =int(position)
+    except UnboundLocalError:
+        print("unbound")
+        return
+    except ValueError:
+        print("please use valid integer for positions")
+        return
+    
+    f = v.place(val,actposition)
     #subtract number of counts if placemtn successful, else return if end has been reached
     if f == True:
         count-=1
     elif f == "End":
         return "done"
-    inputs(count) 
+    inputs(count)
     
 #callin input function
 inputs(count)
