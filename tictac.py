@@ -138,6 +138,8 @@ def inputs(count):
     
     #check if position given is an interger
     
+    actposition =int(position)
+    '''
     try:
         actposition =int(position)
     except UnboundLocalError:
@@ -146,7 +148,7 @@ def inputs(count):
     except ValueError:
         print("please use valid integer for positions")
         return
-    
+    '''
     f = v.place(val,actposition)
     #subtract number of counts if placemtn successful, else return if end has been reached
     if f == True:
