@@ -114,3 +114,24 @@ Enter your position: 0
 ['[6]', 'x', 'o']
 o is the winner!
 ```
+
+### Additional scenario of the game
+```
+> python tictac.py
+['[0]', '[1]', '[2]']
+['[3]', '[4]', '[5]']
+['[6]', '[7]', '[8]']
+Enter your value: x
+Enter your position: 8
+['[0]', '[1]', '[2]']
+['[3]', '[4]', '[5]']
+['[6]', '[7]', 'x']
+Enter your value: o
+Enter your position: 3
+['[0]', '[1]', '[2]']
+['o', '[4]', '[5]']
+['[6]', '[7]', 'x']
+Enter your value: x
+Enter your position: 6e
+please use valid integer for positions
+```
