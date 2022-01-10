@@ -4,7 +4,7 @@ Programming different games using python and accepting user input in some cases.
 ## TicTacToe 
 ### Example game scenario after running tictac.py
 ```
-> python tictac.py 
+> python3 tictac.py 
 ['[0]', '[1]', '[2]']
 ['[3]', '[4]', '[5]']
 ['[6]', '[7]', '[8]']
@@ -62,7 +62,7 @@ no more plays available
 
 ### Another scenario of the game
 ```
-> python tictac.py
+> python3 tictac.py
 ['[0]', '[1]', '[2]']
 ['[3]', '[4]', '[5]']
 ['[6]', '[7]', '[8]']
@@ -117,7 +117,7 @@ o is the winner!
 
 ### Additional scenario of the game
 ```
-> python tictac.py
+> python3 tictac.py
 ['[0]', '[1]', '[2]']
 ['[3]', '[4]', '[5]']
 ['[6]', '[7]', '[8]']
